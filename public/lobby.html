@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta content='user-scalable=no, initial-scale=1, width=device-width' id='viewport' name='viewport'>
+	<title> Lobby </title>	
+	<link rel="icon" type="image/png" href="img/favicon.png">
+	<link rel="stylesheet" type="text/css" href="css/lobby.css" />
+	<script type="text/javascript" src="js/GameLobby.js"></script>
+	<script type="text/javascript" src="js/WebsocketConnection.js"></script>
+	<script type="text/javascript">
+	function loaded() {
+		var GL = new GameLobby();
+	}
+	</script>
+</head>
+
+<body onload="loaded()">
+	<!-- Provides spacing for the sky and content -->
+	<div id="contentDiv"></div>
+	<!-- Handles the movement of the waves -->
+	<div id="WaterAndBelow">
+		<div id="waterPeak"></div>
+		<div id="waterLow"></div>		
+	</div>	
+	<!-- Contains all the deep blue see and provides some spacing until the sea floor -->
+	<div id="water"></div>
+	<!-- The Sea Floor, will contain images and interactive stuff -->
+	<div id="SeaFloor">
+		<div id="Chest"></div>
+	</div>
+	<!-- The Island Image -->
+	<div id="PalmTree"></div>
+	<!-- The swinging Sign - Provides information about starting a new game -->
+	<div id="Sign">
+		<div id="inputBox">
+			<input id="PlayerNameBox" type="text">
+		</div>		
+		<input type="button" id="ConnectButton" value="Connect">
+		<br>
+		<a href="singlePlayer.html">Play Single Player For Now</a>
+		<div id="ChallengersContainer">
+			<ul id="Challengers">			
+			</ul>	
+		</div>	
+		<div id="ChallengedByList">
+		</div>	
+		<div id="ConnectionStatusContainer">
+			<p id="ConnectionStatus">Not connected to server.</p>
+		</div>		
+	</div>
+	<!-- A cloud that just floads around on a keyframe -->
+	<div id="CloudOne"></div>	
+
+
+
+
+
+
+
+
+	<!-- Templates and other hidden elements -->
+
+    <div id="lightboxDiv" class="lightbox">
+    	<p id="ChallengeNotification"></p>
+    	<input id="AcceptButton" type="button" value="Play!">
+    	<input id="DeclineButton" type="button" value="Flee!">
+    </div>        
+    <div id="dimDiv" class="dimLight"></div>
+
+	<ul id="templateUL" class="hidden">	
+		<li id="templateLI">
+			<span style="background-color: orange">
+				Nathan
+			</span>
+			<span style="background-color: teal">
+				Roger
+			</span>
+		</li>		
+	</ul>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
